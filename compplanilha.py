@@ -7,6 +7,6 @@ files = ["compilarplanilhas/BA.csv","compilarplanilhas/DF.csv","compilarplanilha
 
 df = pd.DataFrame()
 for file in files:
-    df_temp = pd.read_excel(file)
+    df_temp = pd.read_csv(file)
     df = pd.concat([df, df_temp])
-df.to_csv("grouped7.csv", encoding="utf-8", sep=";")
+df.to_csv("planilha_geral.csv", encoding="utf-8", sep=";")
